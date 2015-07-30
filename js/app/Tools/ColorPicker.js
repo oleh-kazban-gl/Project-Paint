@@ -7,14 +7,9 @@ define(function (require) {
 
     try {
       var data = colorAtPoint(context, position.x, position.y);
-    }
-    catch (error) {
-      if (error instanceof SecurityError) {
-        alert('Unable to access your picture\'s pixel data');
-        return;
-      } else {
-        throw error
-      }
+    } catch (error) {
+      alert(JSON.stringify(error.toString()));
+      return;
     }
 
     //If picture is transparent set color to white
