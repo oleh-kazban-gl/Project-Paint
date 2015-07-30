@@ -1,14 +1,14 @@
 define(function (require) {
-  var elt = require('../Helpers/element');
+  var element = require('../Helpers/element');
 
-  return function (cx) {
-    var input = elt("input", {type: "text"});
-    var form = elt("form", null,
-      "Open URL: ", input,
-      elt("button", {type: "submit"}, "load"));
-    form.addEventListener("submit", function (event) {
+  return function (context) {
+    var input = element('input', {type: 'text'});
+    var form = element('form', null,
+      'Open URL: ', input,
+      element('button', {type: 'submit'}, 'load'));
+    form.addEventListener('submit', function (event) {
       event.preventDefault();
-      loadImageURL(cx, input.value);
+      loadImageURL(context, input.value);
     });
     return form;
   };

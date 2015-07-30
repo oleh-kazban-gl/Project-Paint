@@ -1,17 +1,17 @@
-define(function (require) {
-  function loadImageURL(cx, url) {
+define(function () {
+  return function (context, url) {
     var image = document.createElement("img");
-    image.addEventListener("load", function () {
-      var color = cx.fillStyle, size = cx.lineWidth;
-      cx.canvas.width = image.width;
-      cx.canvas.height = image.height;
-      cx.drawImage(image, 0, 0);
-      cx.fillStyle = color;
-      cx.strokeStyle = color;
-      cx.lineWidth = size;
-    });
-    image.src = url;
-  }
 
-  return loadImageURL;
+    image.addEventListener("load", function () {
+      var color = context.fillStyle, size = context.lineWidth;
+      context.canvas.width = image.width;
+      context.canvas.height = image.height;
+      context.drawImage(image, 0, 0);
+      context.fillStyle = color;
+      context.strokeStyle = color;
+      context.lineWidth = size;
+    });
+
+    image.src = url;
+  };
 });

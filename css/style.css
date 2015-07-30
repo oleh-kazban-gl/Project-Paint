@@ -9,5 +9,11 @@
     overflow: auto;
     position: relative;
 }
-.picturepanel canvas { display: block; }
-.toolbar > * { margin-right: 5px; }
+
+.picturepanel canvas {
+    display: block;
+}
+
+.toolbar > * {
+    margin-right: 5px;
+}

@@ -6,4 +6,4 @@
 
 'use strict';
 
-requirejs(['app/paint']);
+requirejs(['app/Paint']);

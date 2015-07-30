@@ -1,12 +1,10 @@
 define(function () {
-  function relativePos(event, element) {
+  return function (event, element) {
     var rect = element.getBoundingClientRect();
 
     return {
       x: Math.floor(event.clientX - rect.left),
       y: Math.floor(event.clientY - rect.top)
     };
-  }
-
-  return relativePos;
+  };
 });

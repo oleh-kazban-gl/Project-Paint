@@ -1,20 +1,21 @@
 define(function (require) {
-  var elt = require('../Helpers/element');
+  var element = require('../Helpers/element');
   var tools = require('../Tools');
 
-  return function (cx) {
-    var select = elt("select");
-    for (var name in tools)
-      select.appendChild(elt("option", null, name));
+  return function (context) {
+    var select = element('select');
+    for (var name in tools) {
+      select.appendChild(element('option', null, name));
+    }
 
-    cx.canvas.addEventListener("mousedown", function (event) {
+    context.canvas.addEventListener('mousedown', function (event) {
       if (event.which == 1) {
-        tools[select.value](event, cx);
+        tools[select.value](event, context);
         event.preventDefault();
       }
     });
 
-    return elt("span", null, "Tool: ", select);
+    return element('span', null, 'Tool: ', select);
   };
 });
 

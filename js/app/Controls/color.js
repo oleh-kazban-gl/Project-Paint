@@ -1,12 +1,14 @@
 define(function (require) {
-  var elt = require('../Helpers/element');
+  var element = require('../Helpers/element');
 
-  return function (cx) {
-    var input = elt("input", {type: "color"});
-    input.addEventListener("change", function () {
-      cx.fillStyle = input.value;
-      cx.strokeStyle = input.value;
+  return function (context) {
+    var input = element('input', {type: 'color', id: 'color'});
+
+    input.addEventListener('change', function () {
+      context.fillStyle = input.value;
+      context.strokeStyle = input.value;
     });
-    return elt("span", null, "Color: ", input);
+
+    return element('span', null, 'Color: ', input);
   };
 });
