@@ -4,7 +4,26 @@ define(function (require) {
 
   return function (event, context) {
     var position = relativePos(event, context.canvas);
-    var data = colorAtPoint(context, position.x, position.y);
+
+    try {
+      var data = colorAtPoint(context, position.x, position.y);
+    }
+    catch (error) {
+      if (error instanceof SecurityError) {
+        alert('Unable to access your picture\'s pixel data');
+        return;
+      } else {
+        throw error
+      }
+    }
+
+    //If picture is transparent set color to white
+    if (data[3] === 0) {
+      data[0] = 255;
+      data[1] = 255;
+      data[2] = 255;
+    }
+
     var colorStyle = 'rgb(' + data[0] + ',' + data[1] + ',' + data[2] + ')';
     var colorTool = document.getElementById('color');
 
