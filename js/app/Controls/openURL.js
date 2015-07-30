@@ -1,5 +1,6 @@
 define(function (require) {
   var element = require('../Helpers/element');
+  var loadImageURL = require('../Helpers/loadImageURL');
 
   return function (context) {
     var input = element('input', {type: 'text'});
