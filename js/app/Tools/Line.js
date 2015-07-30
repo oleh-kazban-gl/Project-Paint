@@ -2,16 +2,16 @@ define(function (require) {
   var relativePos = require('../Helpers/relativePos');
   var trackDrag = require('../Helpers/trackDrag');
 
-  return function (event, cx, onEnd) {
-    cx.lineCap = "round";
+  return function (event, context, onEnd) {
+    context.lineCap = "round";
 
-    var pos = relativePos(event, cx.canvas);
+    var pos = relativePos(event, context.canvas);
     trackDrag(function (event) {
-      cx.beginPath();
-      cx.moveTo(pos.x, pos.y);
-      pos = relativePos(event, cx.canvas);
-      cx.lineTo(pos.x, pos.y);
-      cx.stroke();
+      context.beginPath();
+      context.moveTo(pos.x, pos.y);
+      pos = relativePos(event, context.canvas);
+      context.lineTo(pos.x, pos.y);
+      context.stroke();
     }, onEnd);
   };
 });

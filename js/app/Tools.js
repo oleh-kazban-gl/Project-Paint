@@ -1,9 +1,9 @@
 define(function (require) {
-  var Erase = require('./Erase');
-  var Line = require('./Line');
-  var Rectangle = require('./Rectangle');
-  var Spray = require('./Spray');
-  var Text = require('./Text');
+  var Erase = require('./Tools/Erase');
+  var Line = require('./Tools/Line');
+  var Rectangle = require('./Tools/Rectangle');
+  var Spray = require('./Tools/Spray');
+  var Text = require('./Tools/Text');
 
   var tools = Object.create(null);
 

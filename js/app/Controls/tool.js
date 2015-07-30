@@ -1,6 +1,6 @@
 define(function (require) {
   var elt = require('../Helpers/element');
-  var tools = require('../Tools/Tools');
+  var tools = require('../Tools');
 
   return function (cx) {
     var select = elt("select");

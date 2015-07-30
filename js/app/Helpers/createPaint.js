@@ -1,5 +1,5 @@
 define(function (require) {
-  var controls = require('../Controls/Controls');
+  var controls = require('../Controls');
   var elt = require('./element');
 
   function createPaint(parent) {
