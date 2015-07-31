@@ -4,13 +4,10 @@
  * see: https://github.com/olehkazban/Project-Paint for details
  */
 
-define(function () {
+define(function (require) {
   'use strict';
 
-  return function (event) {
-    return {
-      x: Math.floor(event.pageX),
-      y: Math.floor(event.pageY)
-    };
+  return function () {
+
   }
 });
