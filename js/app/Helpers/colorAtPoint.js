@@ -4,14 +4,10 @@
  * see: https://github.com/olehkazban/Project-Paint for details
  */
 
-define(function (require) {
+define(function () {
   'use strict';
 
-  var relativePos = require('../Helpers/relativePos');
-
-  return function () {
-
+  return function (context, x, y) {
+    return context.getImageData(x, y, 1, 1).data;
   }
 });
-
-
