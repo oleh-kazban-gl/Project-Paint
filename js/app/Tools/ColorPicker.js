@@ -22,17 +22,9 @@ define(function (require) {
       return;
     }
 
-    //If picture is transparent set color to white
-    if (data[3] === 0) {
-      data[0] = 255;
-      data[1] = 255;
-      data[2] = 255;
-    }
-
-    var colorStyle = 'rgb(' + data[0] + ',' + data[1] + ',' + data[2] + ')';
     var colorTool = document.getElementById('color');
 
-    context.fillStyle = colorStyle;
+    context.fillStyle = rgb2Hex(data);
     colorTool.value = rgb2Hex(data);
   };
 });

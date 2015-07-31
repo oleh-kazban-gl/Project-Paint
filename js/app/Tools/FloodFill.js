@@ -14,9 +14,10 @@ define(function (require) {
   return function (event, context) {
     var position = relativePos(event, context.canvas);
     console.log(position.x, position.y);
-    var color = colorAtPoint(position.x, position.y);
+    var color = colorAtPoint(context, position.x, position.y);
     console.log(color);
     var colorHex = rgb2Hex(color);
+    console.log(colorHex);
   }
 });
 
