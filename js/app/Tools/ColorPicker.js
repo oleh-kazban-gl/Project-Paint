@@ -33,6 +33,6 @@ define(function (require) {
     var colorTool = document.getElementById('color');
 
     context.fillStyle = colorStyle;
-    colorTool.value = rgb2Hex(data[0], data[1], data[2]);
+    colorTool.value = rgb2Hex(data);
   };
 });
