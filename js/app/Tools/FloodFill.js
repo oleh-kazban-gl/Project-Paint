@@ -18,6 +18,8 @@ define(function (require) {
     console.log(color);
     var colorHex = rgb2Hex(color);
     console.log(colorHex);
+
+
   }
 });
 

@@ -8,11 +8,7 @@
 define(function () {
   'use strict';
 
-  var readColor = require('./readColor');
-
   return function (color) {
-    color = readColor(color);
-
     return 'rgb(' + color[0] + ',' + color[1] + ',' + color[2] + ')';
   }
 });

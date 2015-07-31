@@ -4,10 +4,12 @@
  * see: https://github.com/olehkazban/Project-Paint for details
  */
 
-define(function () {
+define(function (require) {
   'use strict';
 
+  var readColor = require('./readColor');
+
   return function (context, x, y) {
-    return context.getImageData(x, y, 1, 1).data;
+    return readColor(context.getImageData(x, y, 1, 1).data);
   }
 });

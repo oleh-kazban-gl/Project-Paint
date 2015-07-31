@@ -5,14 +5,10 @@
  * @param(color) - array [red, green, blue]
  */
 
-define(function (require) {
+define(function () {
   'use strict';
 
-  var readColor = require('./readColor');
-
   return function (color) {
-    color = readColor(color);
-
     var red = toHex(color[0]);
     var green = toHex(color[1]);
     var blue = toHex(color[2]);

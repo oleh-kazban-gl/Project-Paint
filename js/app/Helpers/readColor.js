@@ -3,6 +3,7 @@
  * Available via the MIT or new BSD license.
  * see: https://github.com/olehkazban/Project-Paint for details
  * @param(color) - array [red, green, blue, alpha]
+ * @return(array) - array [red, green, blue]
  */
 
 define(function () {
